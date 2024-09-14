@@ -22,6 +22,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+
   <meta charset="UTF-8">
   <title>KALINDU AKALANKA</title>
 
@@ -49,7 +57,7 @@
     }
     header>nav>ul>li{
       display: inline;
-      margin: 0 2px;
+      margin: 0 10px;
       color: white;
       font-family: "Jacques Francois Shadow", serif;
       font-weight: 400;
@@ -61,7 +69,7 @@
       top: 0;
       bottom: 0;
       margin: auto;
-      right: 10px;
+      left: 400px;
       margin: 25px 10px;
       position: absolute;
     }
@@ -156,8 +164,10 @@
 
 
     }
-    main>section>#img1{
-    top: 50px;
+    #img2{
+      position: relative;
+               top: 1px;
+
 
 
 
@@ -169,7 +179,19 @@
       border: 5px solid black;
     }
 
+    #img1{
+      width: 400px;
+      height: 400px;
+      border-radius: 100%;
+      border: 10px solid black;
+    }
+    #card1{
+
+    }
+
   </style>
+
+
 
 </head>
 <body>
@@ -206,14 +228,14 @@
 
       KALINDU AKALANKA
     </div>
-    <div id="div2">
+    <div id="div2" class="animate__heartBeat">
       SOFTWARE ENGINEER
       FULLSTACK
     </div>
     <div id="img1">
 
     <!--  <img src="Assests/WhatsApp_Image_2024-06-29_at_6.59.50_PM-removebg-preview.png"class="polygon hexagon"> -->
-    <img src="Assests/WhatsApp_Image_2024-06-29_at_6.59.50_PM-removebg-preview.png">
+    <img id="img2" src="Assests/WhatsApp_Image_2024-06-29_at_6.59.50_PM-removebg-preview.png">
     </div>
 
     <div>
@@ -226,7 +248,8 @@
     <h2>
       ABOUT
     </h2>
-    <div>
+    <div data-aos="fade-up"
+         data-aos-anchor-placement="top-bottom">
       <p>Hello and thank you for visiting my portfolio. I am a dedicated software engineering student passionate about creating efficient, user-friendly software solutions. Throughout my academic journey, I have developed a strong foundation in software development, focusing on  web development, mobile apps, machine learning.
       </p>
     </div>
@@ -269,6 +292,10 @@
   <section>
 
     <h2>PROJECTS</h2>
+
+    <div id="card1">
+
+    </div>
     <div>
       <ul>
         <li>ASSIGNMENT</li>
@@ -332,5 +359,10 @@
 </div>
 </footer>
 
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
