@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!--  link-->
   <link rel="stylesheet" href="Style/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,11 +125,15 @@
 
     }
 
-    footer{
-      position: absolute;
-      bottom: 0;
-    }
+    /*footer{*/
+    /*  position: absolute;*/
+    /*  bottom: 0px;*/
+    /*}*/
 
+    #home{
+      height: 100vh;
+
+    }
     header>section>div{
       position: absolute;
       left: 10px;
@@ -236,7 +244,7 @@
       font-family: "Black Ops One", system-ui;
       font-weight: 400;
       font-style: normal;
-      color: #373232;
+      color: #59deff;
 
 
     }
@@ -257,26 +265,9 @@
 
 
     }
-    .hexagon {
-      aspect-ratio: cos(30deg);
-      margin-inline: calc(var(200px) / -2);
-      padding-inline: calc(var(200px) / 2);
-      border: 5px solid black;
-    }
 
-    /*!*#img1{*!*/
-    /*  position: relative;*/
-    /*  width: 440px;*/
-    /*  height: 420px;*/
-    /*  top: 40px;*/
-    /*  left: 10px;*/
-    /*  border-radius: 100%;*/
-    /*  border: 10px solid black;*/
-    /*  z-index: 20;*/
-    /*}*/
-    #card1{
 
-    }
+
 
     #Cvbtn{
       position: absolute;
@@ -356,15 +347,6 @@
 
     }
 
-    footer{
-      position: absolute;
-      width: 100%;
-      height: 40px;
-      bottom: 0;
-      background: #3cb0fd;
-    }
-
-
 
     nav .togglebtn{
       width: 35px;
@@ -387,6 +369,124 @@
 
     }
 
+    .Scroll {
+      width: 50px;
+      height: 50px;
+
+      top: 580px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .field {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 300px;
+    }
+
+
+    .scroll {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      position: relative;
+      animation: down 1.5s infinite;
+      -webkit-animation: down 1.5s infinite;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 18px;
+        width: 18px;
+        height: 18px;
+        border-left: 2px solid #333;
+        border-bottom: 2px solid #333;
+        transform: rotate(-45deg);
+      }
+    }
+
+    @keyframes down {
+      0% {
+        transform: translate(0);
+      }
+      20% {
+        transform: translateY(15px);
+      }
+      40% {
+        transform: translate(0);
+      }
+    }
+
+    @-webkit-keyframes down {
+      0% {
+        transform: translate(0);
+      }
+      20% {
+        transform: translateY(15px);
+      }
+      40% {
+        transform: translate(0);
+      }
+    }
+
+
+    #about{
+      position: absolute;
+      color: white;
+      top: 650px;
+      background-color: #000000;
+      height: 700px;
+    }
+
+    #about>h2{
+      color: white;
+
+      text-align: center;
+      margin: auto;
+
+      top: 100px;
+    }
+
+    #about>div>p{
+
+      position: relative;
+      top: 100px;
+      left: 20px;
+
+      text-align:left;
+    }
+
+    #Education{
+      background-color: #d10047;
+      color: white;
+      position: absolute;
+      width: 100vw;
+      top: 1200px;
+    }
+
+    #Education>h2{
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+    }
+
+
+    footer{
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      bottom: -500px;
+      background: #3cb0fd;
+    }
 
     @media (max-width: 1440px) {
         header{
@@ -461,9 +561,11 @@
 
     @media (max-width: 425px) {
 
+
     }
 
     }
+
 
 
 
@@ -487,7 +589,7 @@
     </div>
     <ul class="navLinks">
       <li><a href="#">HOME</a></li>
-      <li><a href="#">ABOUT</a></li>
+      <li><a href="#about">ABOUT</a></li>
       <li><a href="#">EDUCATION</a></li>
       <li><a href="#">SERVICES</a></li>
       <li><a href="#">PROJECTS</a></li>
@@ -504,7 +606,7 @@
 <main>
 
   <!--home section-->
-  <section>
+  <section id="home">
     <div id="div0">
       HI , I'm <br>
     </div>
@@ -513,7 +615,7 @@
 
       KALINDU AKALANKA
     </div>
-    <div id="div2" class="animate__heartBeat">
+    <div id="div2" class="input">
       SOFTWARE ENGINEER
       FULLSTACK
     </div>
@@ -528,24 +630,34 @@
       <button id="hirebtn"> Hire me</button>
     </div>
 
+    <div class="Scroll">
+      <div class="field">
+
+        <div class="scroll"></div>
+
+      </div>
+    </div>
 
   </section>
 
   <!--About section-->
-  <section>
+  <section id="about">
     <h2>
       ABOUT
     </h2>
     <div data-aos="fade-up"
          data-aos-anchor-placement="top-bottom">
-      <p>Hello and thank you for visiting my portfolio. I am a dedicated software engineering student passionate about creating efficient, user-friendly software solutions. Throughout my academic journey, I have developed a strong foundation in software development, focusing on  web development, mobile apps, machine learning.
+      <p>Hello , I am Kalindu Akalanka . </p>
+      <p>thank you for visiting my portfolio.</p>
+      <p> I am a dedicated software engineering student passionate about creating efficient, user-friendly software solutions. Throughout my academic journey, I have developed a strong foundation in software development, focusing on  web development, mobile apps, machine learning.
       </p>
     </div>
 
   </section>
 
   <!--Educaton section-->
-  <section>
+  <section id="Education">
+    <h2>EDUCATION</h2>
     <div>
       <ul>
         <li>School</li>
@@ -626,11 +738,11 @@
       ktdkakalanka@gmail.com
     </div>
 
-    <div>
-      name<input type="text"> <br>
-      description<input type="text"><br>
-      massage<input type="text">
-    </div>
+<!--    <div>-->
+<!--      name<input type="text"> <br>-->
+<!--      description<input type="text"><br>-->
+<!--      massage<input type="text">-->
+<!--    </div>-->
 
     <div>
       <p>
@@ -639,6 +751,8 @@
     </div>
   </section>
 </main>
+
+
 
 <!--footer section--->
 <footer>
@@ -652,7 +766,7 @@
 
 
 </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
 <script>
   var togglebtn=document.querySelector(".togglebtn");
   var nav=document.querySelector(".navLinks");
@@ -661,6 +775,14 @@
   togglebtn.addEventListener("click", function(){
     this.classList.toggle("click");
     nav.classList.toggle("open");
+  })
+
+
+  var typed=new Typed(".input", {
+    strings: ["Frontend Developer", "UX Designer", "Web Developer","Backend Developer"],
+    typedSpeed: 50,
+    backSpeed: 55,
+    loop: true
   })
 </script>
 <script>
