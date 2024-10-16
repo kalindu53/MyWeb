@@ -438,12 +438,12 @@
       }
     }
 
-
+/*=============================About========================================*/
     #about{
       position: absolute;
       color: white;
       top: 650px;
-      background-color: #c5bebe;
+      background-color: #000000;
       height: 400px;
     }
 
@@ -495,7 +495,7 @@
 
 
 
-    /*services*/
+    /*=====================services====================================================*/
     #Services {
       font-size: 17px;
       line-height: 30px;
@@ -507,8 +507,9 @@
       margin: 0;
       background: #000000;
       position: relative;
-      top:350px;
-      border: 5px solid green;
+      top:300px;
+      /*border: 5px solid green;*/
+      height: auto;
 
 
 
@@ -516,6 +517,7 @@
 
     #Services>h2{
       position: relative;
+      /*display: flex;*/
       top: 100px;
       text-align: center;
       color: white;
@@ -623,15 +625,70 @@
 
 
 
+    /*========================PROJECTS===============*/
+
+    #projects{
+      position: relative;
+      top: 500px;
+      background-color: #020202;
+
+    }
+
+    #projects>h2,div>h2{
+      position: relative;
+      color: white;
+      text-align: center;
+
+    }
+
+    #Assignment{
+      display: grid;
+      grid-template-columns: repeat(4 ,15rem);
+      justify-content: center;
+      overflow: hidden;
+
+    }
+
+    #Assignment>div{
+      /*border: 2px solid red;*/
+      width: 200px;
+      height: 300px;
+      margin: 5px;
+
+    }
+
+    #Assignment>div>p{
+      text-align: center;
+      color: white;
+    }
+
+    #Assignment>div>img{
+      height: 200px;
+      width: 190px;
+      align-content: center;
+    }
+    #Assignment>div>button{
+      display: flex;
+      align-items: center;
+      margin-left: 55px;
+
+
+    }
+
+
+
+
+
 
 
 /*==================Responsiv=======================*/
 
     @media (max-width: 1440px) {
-      header{
+      header {
         height: 80px;
         width: 100vw;
       }
+    }
 
       @media (max-width: 1024px) {
         header{
@@ -650,20 +707,38 @@
         }
       }
 
-      }
+        @media (max-width: 950px) {
+
+          .creative-cards .container .row .card-column {
+            flex: 0 0 auto;
+            width: 25%;
+            margin-bottom: 20px;
+
+          }
+          #Assignment {
+            display: grid;
+            grid-template-columns: repeat(2, 15rem);
+          }
+
+        }
+
 
 
       @media (max-width: 900px) {
-        .cover{
+        .cover {
           display: none;
+        }
           .creative-cards .container .row .card-column {
             flex: 0 0 auto;
             width: 50%;
             margin-bottom: 40px;
 
           }
-        }
-        }
+
+
+        /*#Assignment{*/
+        /*  !*display: grid;*!*/
+        /*  grid-template-columns: repeat(2 ,15rem);*/
 
         nav .togglebtn{
           display: initial;
@@ -714,6 +789,13 @@
         }
 
 
+
+
+
+      }
+
+
+
       @media (max-width: 425px) {
 
         .creative-cards .container .row .card-column {
@@ -726,8 +808,15 @@
           width: 100%;
         }
 
+        #Assignment {
+          display: grid;
+          grid-template-columns: repeat(1, 15rem);
+        }
+
 
       }
+
+
 
 
 
@@ -884,24 +973,74 @@
       </div>
     </section>
   <!--projects section-->
-  <section>
+  <section  id="projects">
 
     <h2>PROJECTS</h2>
 
     <div id="card1">
 
     </div>
-    <div>
-      <ul>
-        <li>ASSIGNMENT</li>
-        <li>PROJECTS</li>
-        <li>INTRODUCE</li>
-      </ul>
+    <p><h2>Assignment</h2></p>
+    <div id="Assignment">
+
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>Assignment 01</p>
+        <img src="Assests/Case1.png" alt="Assingment">
+        <button>View</button>
+      </div >
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>Assignment 02</p>
+        <img src="Assests/Case1.png" alt="Assingment">
+        <button>View</button>
+      </div>
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>Assignment 03</p>
+        <img src="Assests/Case1.png" alt="Assingment">
+        <button>View</button>
+      </div>
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>Assignment 04</p>
+        <img src="Assests/Case1.png" alt="Assingment">
+        <button>View</button>
+      </div>
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>Assignment 05</p>
+        <img src="Assests/Case1.png" alt="Assingment">
+        <button>View</button>
+      </div>
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom" >
+        <p>Assignment 06</p>
+        <img src="Assests/Case1.png" alt="Assingment">
+        <button>View</button>
+      </div>
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>Assignment 07</p>
+        <img src="Assests/Case1.png" alt="Assingment">
+        <button>View</button>
+      </div>
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>Assignment 08</p>
+        <img src="Assests/Case1.png" alt="Assingment">
+        <button>View</button>
+      </div>
     </div>
+
+    <div id="projectsCards">
+      <p><h2>Projects</h2></p>
+    </div>
+
   </section>
 
   <!--skills section-->
-  <section>
+  <section id="Skills">
     <h2>SKILLS</h2>
 
     <div>
@@ -982,6 +1121,7 @@
 </script>
 <script>
   AOS.init();
+
 </script>
 </body>
 </html>
