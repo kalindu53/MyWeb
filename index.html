@@ -157,7 +157,7 @@
 
     .cover{
       position: absolute;
-      width: 740px;
+      width: 760px;
       height: 10px;
       /*left: 342px;*/
       top: 5px;
@@ -183,7 +183,7 @@
       margin: auto;
       text-align: center;
       top: 295px;
-      font-size: 50px;
+      font-size: 40px;
       color: #ffdd2e;
       text-shadow: 7px 16px 13px #000000;
       font-family: "Signika Negative", sans-serif;
@@ -482,13 +482,13 @@
     /*}*/
 
 
-    footer{
-      position: absolute;
-      width: 100%;
-      height: 40px;
-      bottom: -2000px;
-      background: #3cb0fd;
-    }
+    /*footer{*/
+    /*  position: absolute;*/
+    /*  width: 100%;*/
+    /*  height: 40px;*/
+    /*  bottom: -2000px;*/
+    /*  background: #3cb0fd;*/
+    /*}*/
 
 
 
@@ -507,7 +507,7 @@
       margin: 0;
       background: #000000;
       position: relative;
-      top:300px;
+      top:200px;
       /*border: 5px solid green;*/
       height: auto;
 
@@ -629,7 +629,7 @@
 
     #projects{
       position: relative;
-      top: 500px;
+      top: 300px;
       background-color: #020202;
 
     }
@@ -673,15 +673,668 @@
       margin-left: 55px;
 
 
+
+
+    }
+    #projectsCards{
+      display: grid;
+      grid-template-columns: repeat(4 ,15rem);
+      justify-content: center;
+      overflow: hidden;
+
+    }
+
+    #projectsCards>div{
+      /*border: 2px solid red;*/
+      width: 200px;
+      height: 300px;
+      margin: 5px;
+
+
+      background: rgba(58, 58, 58, 0.49);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(175, 141, 141, 0.5);
+      backdrop-filter: blur(6.4px);
+      -webkit-backdrop-filter: blur(6.4px);
+      border: 1px solid rgba(222, 207, 207, 0.44);
+
+    }
+
+    #projectsCards>div>p{
+      text-align: center;
+      color: white;
+    }
+
+    #projectsCards>div>img{
+      height: 200px;
+      width: 190px;
+      align-content: center;
+    }
+    #projectsCards>div>button{
+      display: flex;
+      align-items: center;
+      margin-left: 55px;
+      border-radius: 80%;
+
+
+    }
+
+
+    /*======================================skills================================*/
+
+
+    #Skills{
+      font: 400 1em/1.5 "Neuton"; background: black; color: rgba(255,255,255,.25); text-align: center; margin: 0;
+      position: relative;
+      top: 300px;
+      height: 100vh;
+      align-content: center;
+
+
+    }
+
+
+    #Skills>h2{
+      position: relative;
+      color: white;
+      top: 100px;
+      text-align: center;
+    }
+    #Skills>p {
+      text-transform: uppercase;
+      letter-spacing: .5em;
+      display: inline-block;
+      /*border: 4px double rgba(255,255,255,.25);*/
+      /*border-width: 4px 0;*/
+      padding: 1.5em 0em;
+      position: absolute;
+      top: 18%;
+      /*left: 50%;*/
+      /*width: 40em;*/
+      left: 0;
+      right: 0;
+      margin: auto;
+      /*margin: 0 0 0 -20em;*/
+      overflow: hidden;
+      width: 200px;
+
+      span {
+
+        font: 700 4em/1 "Oswald", sans-serif;
+        letter-spacing: 0;
+        /*padding: .25em 0 .325em;*/
+        display: block;
+        /*margin: 0 auto;*/
+        text-shadow: 0 0 80px rgba(255,255,255,.5);
+        /*border: 3px solid red;*/
+        width: 200px;
+
+
+        /* Clip Background Image */
+
+        background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        /* Animate Background Image */
+
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: aitf 80s linear infinite;
+
+        /* Activate hardware acceleration for smoother animations */
+
+        -webkit-transform: translate3d(0,0,0);
+        -webkit-backface-visibility: hidden;
+
+      }
+    }
+
+    /* Animate Background Image */
+
+    @-webkit-keyframes aitf {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+
+
+    /*=====================================================================================================================================================*/
+
+    /* KEYFRAMES */
+
+    @keyframes spin {
+      from {
+        transform: rotate(0);
+      }
+      to{
+        transform: rotate(359deg);
+      }
+    }
+
+    @keyframes spin3D {
+      from {
+        transform: rotate3d(.5,.5,.5, 360deg);
+      }
+      to{
+        transform: rotate3d(0deg);
+      }
+    }
+
+    @keyframes configure-clockwise {
+      0% {
+        transform: rotate(0);
+      }
+      25% {
+        transform: rotate(90deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      75% {
+        transform: rotate(270deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes configure-xclockwise {
+      0% {
+        transform: rotate(45deg);
+      }
+      25% {
+        transform: rotate(-45deg);
+      }
+      50% {
+        transform: rotate(-135deg);
+      }
+      75% {
+        transform: rotate(-225deg);
+      }
+      100% {
+        transform: rotate(-315deg);
+      }
+    }
+
+    @keyframes pulse {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+      to {
+        opacity: .25;
+        transform: scale(.75);
+      }
+    }
+
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    #Skills {
+      min-height: 100vh;
+      background-color: #000000;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+
+    }
+
+    .spinner-box {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+    }
+
+    /* SPINNING CIRCLE */
+
+    .leo-border-1 {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: rgb(63,249,220);
+      background: linear-gradient(0deg, rgba(63,249,220,0.1) 33%, rgba(63,249,220,1) 100%);
+      animation: spin3D 1.8s linear 0s infinite;
+    }
+
+    .leo-core-1 {
+      width: 100%;
+      height: 100%;
+      background-color: #37474faa;
+      border-radius: 50%;
+    }
+
+    .leo-border-2 {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: rgb(251, 91, 83);
+      background: linear-gradient(0deg, rgba(251, 91, 83, 0.1) 33%, rgba(251, 91, 83, 1) 100%);
+      animation: spin3D 2.2s linear 0s infinite;
+    }
+
+    .leo-core-2 {
+      width: 100%;
+      height: 100%;
+      background-color: #1d2630aa;
+      border-radius: 50%;
+    }
+
+    /* ALTERNATING ORBITS */
+
+    .circle-border {
+      width: 150px;
+      height: 150px;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: rgb(63,249,220);
+      background: linear-gradient(0deg, rgba(63,249,220,0.1) 33%, rgba(63,249,220,1) 100%);
+      animation: spin .8s linear 0s infinite;
+    }
+
+    .circle-core {
+      width: 100%;
+      height: 100%;
+      background-color: #1d2630;
+      border-radius: 50%;
+    }
+
+    /* X-ROTATING BOXES */
+
+    .configure-border-1 {
+      width: 115px;
+      height: 115px;
+      padding: 3px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fb5b53;
+      animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+    }
+
+    .configure-border-2 {
+      width: 115px;
+      height: 115px;
+      padding: 3px;
+      left: -115px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(63,249,220);
+      transform: rotate(45deg);
+      animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+    }
+
+    .configure-core {
+      width: 100%;
+      height: 100%;
+      background-color: #1d2630;
+    }
+
+    /* PULSE BUBBLES */
+
+    .pulse-container {
+      width: 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pulse-bubble {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #3ff9dc;
+    }
+
+    .pulse-bubble-1 {
+      animation: pulse .4s ease 0s infinite alternate;
+    }
+    .pulse-bubble-2 {
+      animation: pulse .4s ease .2s infinite alternate;
+    }
+    .pulse-bubble-3 {
+      animation: pulse .4s ease .4s infinite alternate;
+    }
+
+    /* SOLAR SYSTEM */
+
+    .solar-system {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .orbit {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #fafbfC;
+      border-radius: 50%;
+    }
+
+    .earth-orbit {
+      width: 165px;
+      height: 165px;
+      -webkit-animation: spin 12s linear 0s infinite;
+    }
+
+    .venus-orbit {
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 7.4s linear 0s infinite;
+    }
+
+    .mercury-orbit {
+      width: 90px;
+      height: 90px;
+      -webkit-animation: spin 3s linear 0s infinite;
+    }
+
+    .planet {
+      position: absolute;
+      top: -5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #3ff9dc;
+    }
+
+    .sun {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #ffab91;
+    }
+
+    .leo {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+
+    .blue-orbit {
+      width: 165px;
+      height: 165px;
+      border: 1px solid #91daffa5;
+      -webkit-animation: spin3D 3s linear .2s infinite;
+    }
+
+    .green-orbit {
+      width: 120px;
+      height: 120px;
+      border: 1px solid #91ffbfa5;
+      -webkit-animation: spin3D 2s linear 0s infinite;
+    }
+
+    .red-orbit {
+      width: 90px;
+      height: 90px;
+      border: 1px solid #ffca91a5;
+      -webkit-animation: spin3D 1s linear 0s infinite;
+    }
+
+    .white-orbit {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #ffffff;
+      -webkit-animation: spin3D 10s linear 0s infinite;
+    }
+
+    .w1 {
+      transform: rotate3D(1, 1, 1, 90deg);
+    }
+
+    .w2 {
+      transform: rotate3D(1, 2, .5, 90deg);
+    }
+
+    .w3 {
+      transform: rotate3D(.5, 1, 2, 90deg);
+    }
+
+    .three-quarter-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #fb5b53;
+      border-top: 3px solid transparent;
+      border-radius: 50%;
+      animation: spin .5s linear 0s infinite;
+    }
+
+
+    /*=====================================================================================================================================================////////////////////*/
+
+
+    #icons{
+      position: relative;
+      top: 100px;
+      display: grid;
+      grid-template-columns: repeat(4 ,10rem);
+      justify-content: center;
+      overflow: hidden;
+
+    }
+
+    #icons>div{
+      border: 2px solid #51faff;
+      width: 75px;
+      height: 75px;
+      margin: 5px;
+      border-radius: 100%;
+
+    }
+
+    #icons>div>img{
+      height: 70px;
+      width: 70px;
+      align-content: center;
+    }
+
+/*==================================footer===============*/
+
+    ul {
+      margin: 0px;
+      padding: 0px;
+    }
+    .footer-section {
+      background: #000000;
+      position: relative;
+      top: 200px;
+      width: 100vw;
+      /*background: #3cb0fd;*/
+      /*height: 100vh;*/
+    }
+    .footer-cta {
+      border-bottom: 1px solid #373636;
+    }
+    .single-cta i {
+      color: #4cffe0;
+      font-size: 30px;
+      float: left;
+      margin-top: 8px;
+    }
+    .cta-text {
+      padding-left: 15px;
+      display: inline-block;
+    }
+    .cta-text h4 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .cta-text span {
+      color: #757575;
+      font-size: 15px;
+    }
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
+    .footer-pattern img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 330px;
+      background-size: cover;
+      background-position: 100% 100%;
+    }
+    .footer-logo {
+      margin-bottom: 30px;
+    }
+    .footer-logo img {
+      max-width: 200px;
+    }
+    .footer-text p {
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #7e7e7e;
+      line-height: 28px;
+    }
+    .footer-social-icon span {
+      color: #fff;
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 20px;
+    }
+    .footer-social-icon a {
+      color: #fff;
+      font-size: 16px;
+      margin-right: 15px;
+    }
+    .footer-social-icon i {
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 38px;
+      border-radius: 50%;
+
+    }
+    .facebook-bg{
+      background: #3B5998;
+    }
+    .twitter-bg{
+      background: #55ACEE;
+    }
+    .google-bg{
+      background: #DD4B39;
+    }
+    .footer-widget-heading h3 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .footer-widget-heading h3::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      height: 2px;
+      width: 50px;
+      background: #ff5e14;
+    }
+    .footer-widget ul li {
+      display: inline-block;
+      float: left;
+      width: 50%;
+      margin-bottom: 12px;
+    }
+    .footer-widget ul li a:hover{
+      color: #ff5e14;
+    }
+    .footer-widget ul li a {
+      color: #878787;
+      text-transform: capitalize;
+    }
+    .subscribe-form {
+      position: relative;
+      overflow: hidden;
+      width: 100vw;
+      background: black;
+    }
+    .subscribe-form input {
+      width: 100%;
+      padding: 14px 28px;
+      background: #2E2E2E;
+      border: 1px solid #2E2E2E;
+      color: #fff;
+    }
+    .subscribe-form button {
+      position: absolute;
+      right: 0;
+      background: #ff5e14;
+      padding: 13px 20px;
+      border: 1px solid #ff5e14;
+      top: 0;
+    }
+    .subscribe-form button i {
+      color: #fff;
+      font-size: 22px;
+      transform: rotate(-6deg);
+    }
+    .copyright-area{
+      background: #000000;
+      position: relative;
+      /*background: #202020;*/
+      padding: 25px 0;
+      width: 100vw;
+    }
+    .copyright-text p {
+      margin: 0;
+      font-size: 14px;
+      color: #878787;
+      text-align: center;
+    }
+    .copyright-text p a{
+      color: #ff5e14;
+    }
+    .footer-menu li {
+      display: inline-block;
+      margin-left: 20px;
+
+    }
+    .footer-menu li:hover a{
+      color: #ff5e14;
+    }
+    .footer-menu li a {
+      font-size: 14px;
+      color: #878787;
     }
 
 
 
 
-
-
-
-/*==================Responsiv=======================*/
+    /*==================Responsiv==========================================*/
 
     @media (max-width: 1440px) {
       header {
@@ -705,6 +1358,15 @@
           margin-bottom: 40px;
 
         }
+
+        main>section>#div1 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          text-align: center;
+          top: 345px;
+          font-size: 40px;
+        }
       }
 
         @media (max-width: 950px) {
@@ -714,107 +1376,183 @@
             width: 25%;
             margin-bottom: 20px;
 
+
           }
-          #Assignment {
+
+          #Assignment, #projectsCards {
             display: grid;
             grid-template-columns: repeat(2, 15rem);
           }
 
+          #icons {
+            position: relative;
+
+            display: grid;
+            grid-template-columns: repeat(3, 10rem);
+
+          }
+
+          main > section > #div0 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            top: 295px;
+            font-size: 30px;
+          }
         }
+    
+    
+    @media (max-width: 768px) {
+      main>section>#div1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 345px;
+        font-size: 40px;
+      }
+    }
 
 
+          @media (max-width: 900px) {
+            .cover {
+              display: none;
+            }
 
-      @media (max-width: 900px) {
-        .cover {
-          display: none;
-        }
-          .creative-cards .container .row .card-column {
-            flex: 0 0 auto;
-            width: 50%;
-            margin-bottom: 40px;
+            .creative-cards .container .row .card-column {
+              flex: 0 0 auto;
+              width: 50%;
+              margin-bottom: 40px;
+
+            }
+
+
+            /*#Assignment{*/
+            /*  !*display: grid;*!*/
+            /*  grid-template-columns: repeat(2 ,15rem);*/
+            nav .togglebtn {
+              display: initial;
+            }
+
+            .click {
+              top: 45px;
+            }
+
+            .click span {
+              position: absolute;
+              margin-top: 12px
+            }
+
+            .click span:first-child {
+              transform: rotate(-40deg);
+            }
+
+            .click span:nth-child(2) {
+              opacity: 0;
+              margin: 0;
+            }
+
+            .click span:last-child {
+              transform: rotate(45deg);
+              top: 0;
+            }
+
+            nav .navLinks {
+              position: absolute;
+              top: 65px;
+              right: -100%;
+              bottom: 0;
+              width: 50%;
+              height: 100vh;
+              background-color: #222;
+              z-index: 3;
+              box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+              transition: 0.5s;
+              padding: 25px 0px;
+            }
+
+            nav .navLinks li {
+              display: block;
+            }
+
+            nav .navLinks li a {
+              display: block;
+              margin-bottom: 15px;
+              text-align: center;
+            }
+
+            nav .navLinks.open {
+              right: 0;
+            }
+
 
           }
 
 
-        /*#Assignment{*/
-        /*  !*display: grid;*!*/
-        /*  grid-template-columns: repeat(2 ,15rem);*/
 
-        nav .togglebtn{
-          display: initial;
-        }
+          @media (max-width: 425px) {
 
-        .click {
-          top:45px;
-        }
-        .click span{
-          position: absolute;
-          margin-top:12px
-        }
-        .click span:first-child{
-          transform: rotate(-40deg);
-        }
-        .click span:nth-child(2)
-        {
-          opacity: 0;
-          margin:0;
-        }
-        .click span:last-child{
-          transform: rotate(45deg);
-          top:0;
-        }
-        nav .navLinks{
-          position: absolute;
-          top:65px;
-          right:-100%;
-          bottom: 0;
-          width: 50%;
-          height: 100vh;
-          background-color: #222;
-          z-index: 3;
-          box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
-          transition: 0.5s;
-          padding: 25px 0px;
-        }
-        nav .navLinks li{
-          display: block;
-        }
-        nav .navLinks li a{
-          display: block;
-          margin-bottom: 15px;
-          text-align: center;
-        }
-        nav .navLinks.open{
-          right:0;
-        }
+            .creative-cards .container .row .card-column {
+              flex: 0 0 auto;
+              width: 100%;
+              margin-bottom: 20px;
+            }
+
+            .card-details {
+              width: 100%;
+            }
+
+            #Assignment, #projectsCards {
+              display: grid;
+              grid-template-columns: repeat(1, 15rem);
+            }
+            main>section>#div0 {
+              position: absolute;
+              left: 0;
+              right: 0;
+              margin: auto;
+              text-align: center;
+              top: 295px;
+              font-size: 20px;
+            }
 
 
+            main>section>#div1 {
+              position: absolute;
+              left: 0;
+              right: 0;
+              text-align: center;
+              top: 345px;
+              font-size: 30px;
 
+            }
 
-
+          }
+    
+    @media (max-width: 375px) {
+      main>section>#div1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 345px;
+        font-size: 30px;
       }
+    }
 
+    @media (max-width: 320px) {
 
-
-      @media (max-width: 425px) {
-
-        .creative-cards .container .row .card-column {
-          flex: 0 0 auto;
-          width: 100%;
-          margin-bottom: 20px;
-        }
-
-        .card-details {
-          width: 100%;
-        }
-
-        #Assignment {
-          display: grid;
-          grid-template-columns: repeat(1, 15rem);
-        }
-
-
+      main>section>#div1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 345px;
+        font-size: 20px;
       }
+    }
 
 
 
@@ -972,6 +1710,8 @@
         </div>
       </div>
     </section>
+
+  </section>
   <!--projects section-->
   <section  id="projects">
 
@@ -986,114 +1726,295 @@
       <div data-aos="flip-up"
            data-aos-anchor-placement="top-bottom">
         <p>Assignment 01</p>
-        <img src="Assests/Case1.png" alt="Assingment">
-        <button>View</button>
+        <img src="Assests/Case1.png" alt="Assingment" >
+        <a href="Assignment/case1.html"> view</a>
       </div >
       <div data-aos="flip-up"
            data-aos-anchor-placement="top-bottom">
         <p>Assignment 02</p>
-        <img src="Assests/Case1.png" alt="Assingment">
-        <button>View</button>
+        <img src="Assests/case2pic.png" alt="Assingment">
+        <a href="Assignment/case2.html"> view</a>
       </div>
       <div data-aos="flip-up"
            data-aos-anchor-placement="top-bottom">
         <p>Assignment 03</p>
         <img src="Assests/Case1.png" alt="Assingment">
-        <button>View</button>
+        <a href="Assignment/case3.html"> view</a>
       </div>
       <div data-aos="flip-up"
            data-aos-anchor-placement="top-bottom">
         <p>Assignment 04</p>
-        <img src="Assests/Case1.png" alt="Assingment">
-        <button>View</button>
+        <img src="Assests/case4.png" alt="Assingment">
+        <a href="Assignment/case4.html"> view</a>
       </div>
       <div data-aos="flip-up"
            data-aos-anchor-placement="top-bottom">
         <p>Assignment 05</p>
-        <img src="Assests/Case1.png" alt="Assingment">
-        <button>View</button>
+        <img src="Assests/case5.png" alt="Assingment">
+        <a href="Assignment/case5.html"> view</a>
       </div>
       <div data-aos="flip-up"
            data-aos-anchor-placement="top-bottom" >
         <p>Assignment 06</p>
-        <img src="Assests/Case1.png" alt="Assingment">
-        <button>View</button>
+        <img src="Assests/case6.png" alt="Assingment">
+        <a href="Assignment/case6.html"> view</a>
       </div>
       <div data-aos="flip-up"
            data-aos-anchor-placement="top-bottom">
         <p>Assignment 07</p>
-        <img src="Assests/Case1.png" alt="Assingment">
-        <button>View</button>
+        <img src="Assests/case7.png" alt="Assingment">
+        <a href="Assignment/case7.html"> view</a>
       </div>
       <div data-aos="flip-up"
            data-aos-anchor-placement="top-bottom">
         <p>Assignment 08</p>
-        <img src="Assests/Case1.png" alt="Assingment">
-        <button>View</button>
+        <img src="Assests/case8.png" alt="Assingment">
+        <a href="Assignment/case8.html"> view</a>
       </div>
     </div>
 
+    <p><h2>Projects</h2></p>
     <div id="projectsCards">
-      <p><h2>Projects</h2></p>
+<!--      <p><h2>Projects</h2></p>-->
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>PRF CW</p>
+        <img src="Assests/prf.png" alt="Assingment">
+        <a href="https://github.com/kalindu53/BookShopProjectFinal.git">more...</a>
+      </div >
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>Connect $ Game</p>
+        <img src="Assests/connect4.jpg" alt="Assingment">
+        <a href="https://github.com/kalindu53/BookShopProjectFinal.git">more...</a>
+      </div>
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>BookShop</p>
+        <img src="Assests/bookshop.png" alt="Assingment">
+        <a href="https://github.com/kalindu53/BookShopProjectFinal.git">more...</a>
+      </div>
+      <div data-aos="flip-up"
+           data-aos-anchor-placement="top-bottom">
+        <p>PosSystem</p>
+        <img src="Assests/pos.png" alt="Assingment">
+       <a href="https://github.com/kalindu53/Assignment6-POS.git">more...</a>
+      </div>
+
     </div>
 
   </section>
 
   <!--skills section-->
   <section id="Skills">
-    <h2>SKILLS</h2>
+<!--    <h2>SKILLS</h2>-->
+
+    <p>
+
+      <span>
+    SKILLS
+  </span>
+
+    </p>
+
+    <div class="spinner-box">
+      <div class="blue-orbit leo">
+      </div>
+
+      <div class="green-orbit leo">
+      </div>
+
+      <div class="red-orbit leo">
+      </div>
+
+      <div class="white-orbit w1 leo">
+      </div><div class="white-orbit w2 leo">
+    </div><div class="white-orbit w3 leo">
+    </div>
+    </div>
+
+  </section>
+
+  <section id="icon">
+
+    <div id="icons">
+    <div>
+      <img src="Assests/github.png">
+    </div>
 
     <div>
-      <ul>
-       <li>JAVA</li>
-        <li>PYTHON</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JS</li>
-        <li>SQL</li>
-        <LI>TOOLS
-          <ul>
-            <li>INTELLIGE IDEA</li>
-            <li>VS CODE</li>
-          </ul>
-        </LI>
-      </ul>
-
-
+      <img src="Assests/icons8-java-94.png">
     </div>
+    <div>
+      <img src="Assests/icons8-python-94.png">
+    </div>
+    <div>
+      <img src="Assests/icons8-mysql-48.png">
+    </div>
+    <div>
+      <img src="Assests/icons8-visual-studio-64.png">
+    </div>
+    <div>
+      <img src="Assests/icons8-intellij-idea-100.png">
+    </div>
+    <div>
+      <img src="Assests/icons8-arduino-64.png">
+    </div>
+    <div>
+      <img src="Assests/icons8-linux-48.png">
+    </div>
+    </div>
+
+
   </section>
 
 
   <!--contact section-->
-  <section>
-    <h2>CONTACT</h2>
-
-    <div>
-      ktdkakalanka@gmail.com
-    </div>
+<!--  <section>-->
+<!--    <h2>CONTACT</h2>-->
 
 <!--    <div>-->
-<!--      name<input type="text"> <br>-->
-<!--      description<input type="text"><br>-->
-<!--      massage<input type="text">-->
+<!--      ktdkakalanka@gmail.com-->
 <!--    </div>-->
 
-    <div>
-      <p>
-        If you have any suggestion, feedback, opportunity, or are interested in collaborating on a project, we would love to hear from you! Please feel free to reach out to us using the contact details provided below. If you are expecting a reply, kindly mention your contact details in your message.
-      </p>
-    </div>
-  </section>
-</main>
+<!--&lt;!&ndash;    <div>&ndash;&gt;-->
+<!--&lt;!&ndash;      name<input type="text"> <br>&ndash;&gt;-->
+<!--&lt;!&ndash;      description<input type="text"><br>&ndash;&gt;-->
+<!--&lt;!&ndash;      massage<input type="text">&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--    <div>-->
+<!--      <p>-->
+<!--        If you have any suggestion, feedback, opportunity, or are interested in collaborating on a project, we would love to hear from you! Please feel free to reach out to us using the contact details provided below. If you are expecting a reply, kindly mention your contact details in your message.-->
+<!--      </p>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--</main>-->
 
 
 
 <!--footer section--->
-<footer>
-<div>
-  @kalindu Akalanka
-</div>
-</footer>
+<!--<div>-->
+<!--  @kalindu Akalanka-->
+<!--</div>-->
+
+
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                <h4>Find</h4>
+                <span>41/1,Ambepitiya , beruwala</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Call </h4>
+                <span>+94 705713136</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Mail </h4>
+                <span>ktdkakalanka@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+
+              <div class="footer-text">
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                  elit,Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Useful Links</h3>
+              </div>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+<!--                <li><a href="#">Our Services</a></li>-->
+<!--                <li><a href="#">Expert Team</a></li>-->
+<!--                <li><a href="#">Contact us</a></li>-->
+<!--                <li><a href="#">Latest News</a></li>-->
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <div class="footer-widget">
+
+
+              <div class="footer-text mb-25">
+                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+              </div>
+              <div class="subscribe-form">
+                <form action="#">
+                   <textarea placeholder= "Enter Your massage"
+                             id="massage"  rows="5" cols="100">
+
+    </textarea><br><br><br>
+                  <input type="text" placeholder="Email Address">
+                  <button><i class="fab fa-telegram-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>Copyright &copy; All Right Reserved <a href="https://codepen.io/anupkumar92/">Kalindu Akalanka</a></p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+            <div class="footer-menu">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
