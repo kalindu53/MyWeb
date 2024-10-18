@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case1</title>
+
+    <style>
+
+        section{
+            height: 100vh;
+            width:100vw;
+            border: 1px solid black;
+            position: absolute;
+        }
+
+
+
+        section>section:first-child{
+            height: 50vh;
+            width: 50vw;
+            background: red;
+            left: 0;
+            position: absolute;
+        }
+        section>section:nth-child(2){
+            height: 50vh;
+            width: 50vw;
+            background: green;
+            right: 0;
+            position: absolute;
+        }
+        section>section:nth-child(3){
+            height: 50vh;
+            width: 50vw;
+            background: orange;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+        }
+        section>section:nth-child(4){
+            height: 50vh;
+            width: 50vw;
+            background: deeppink;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+        }
+
+        section>section>div{
+            height: 200px;
+            width: 200px;
+            background: white;
+            border-radius: 100%;
+            position: absolute;
+            left: 250px;
+            top: 50px;
+        }
+
+        section>section>div>div{
+            height: 100px;
+            width: 100px;
+            background: red;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+
+        }
+
+        section>div>#div1{
+            width: 200px;
+            height: 200px;
+            background: white;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        section>div>div>#div2{
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 100%;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+        }
+
+        .corner {
+            background: white;
+            width: 15vw;
+            height: 15vw;
+            position: absolute;
+            border-radius: 100%;
+        }
+
+        #corner1 {
+
+            top:calc(-15vw/2);
+            left:calc(-15vw/2);
+            margin: auto;
+        }
+        #corner2 {
+
+            top:calc(-15vw/2);
+            right:calc(-15vw/2);
+            margin: auto;
+
+        }
+        #corner3 {
+            top:-20vh;
+            right:calc(-15vw/2);
+            left:calc(-15vw/2);
+            margin: auto;
+        }
+        #corner4 {
+            bottom:calc(-15vw/2);
+            left: calc(-15vw/2);
+            margin: auto;
+        }
+        #corner5 {
+            bottom: calc(-15vw/2);
+            right: calc(-15vw/2);
+        }
+        #corner6 {
+            bottom:calc(-15vw/2);
+            right:calc(-15vw/2);
+            left:calc(-15vw/2);
+            margin: auto;
+        }
+        body{
+            overflow:hidden;
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+<section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <div>
+        <div id="div1">
+            <div id="div2"></div>
+        </div>
+    </div>
+
+
+
+
+</section>
+
+<div id="corner1" class="corner"></div>
+<div id="corner2" class="corner"></div>
+<div id="corner3" class="corner"></div>
+<div id="corner4" class="corner"></div>
+<div id="corner5" class="corner"></div>
+<div id="corner6" class="corner"></div>
+
+
+
+
+</body>
+</html>
